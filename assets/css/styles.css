@@ -1,17 +1,10 @@
-
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-}
-
-.bgimg {
-    width: 0px;
-    height: 0px;
-    background-image: url("assets/img/icon.png");
+    background-color: #F6F1F1;
 }
 
 p, h1, h2, h3, ul, ul li, ul li a {
@@ -25,10 +18,13 @@ p, h1, h2, h3, ul, ul li, ul li a {
 }
 
 .navigation {
-    float: left;
     list-style-type: none;
     padding: 0;
-    margin: 20px 0 0 20px;
+    margin: 5vh 0 0 5vh;
+}
+
+.newnavcolor {
+    background-color: white;
 }
 
 ul {
@@ -45,36 +41,34 @@ ul li a {
     list-style: none;
     margin: 0;
     color: black;
+    padding-bottom: 1vh;
 }
 
 ul li a:hover {
     cursor: pointer;
-    border-bottom: thin;
+    border-bottom: 1px solid mediumpurple;
+    color: mediumpurple;
 }
 
 .purpleslash {
     color: mediumpurple;
 }
 
-.logoname {
-    text-align: center;
-    font-family: 'Bungee Shade', cursive;
-    color: mediumpurple;
+.logo {
     text-decoration: none;
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 2%;
+    text-align: center;
 }
 
-.logoname a {
-    text-decoration: none;
-    color: mediumpurple;
+.logo img {
+    height: 80px;
+    width: 100px;
 }
+
 
 .links {
     text-align: right;
     list-style-type: none;
-    margin: 20px 20px 0 0;
+    margin: 5vh 5vh 0 0;
 }
 
 .links a {
@@ -95,15 +89,13 @@ ul li a:hover {
 .fadedbox {
     width: 350px;
     height: 414px;
-    background-color: #F6F1F1;
+    background-color: #D2CAF9;
     position: absolute;
     margin-left: 6vw;
 }
 
 .flexcontainer img {
     position: absolute;
-    width: 350px;
-    height: 414px;
     object-fit: fill;
     z-index: 10;
     margin-left: 10vw;
@@ -139,7 +131,7 @@ ul li a:hover {
 
 button {
     margin: 2vw 0 0 10vw;
-    background-color: white;
+    background-color: #F6F1F1;
     border: 2px solid mediumpurple;
     color: mediumpurple;
     font-size: 2.5vh;
@@ -160,7 +152,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 150px;
+    margin-top: 10vh;
     padding-left: 180px;
     padding-right: 180px;
 }
@@ -354,6 +346,46 @@ button:hover {
     color: mediumpurple;
 }
 
+.projekterinfocontainer {
+    width: 100%;
+    margin: 0;
+}
+
+.projekterinfocontainer p {
+    text-align: center;
+    line-height: 4vh;
+    margin: 20vh 40vh 0 40vh;
+}
+
+
+/*Aalborg Zoo*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Om mig styles*/
@@ -363,7 +395,7 @@ button:hover {
 }
 
 .extrabgcolor {
-    background-color: #F6F1F1;
+    background-color: white;
     height: 30vh;
 }
 
