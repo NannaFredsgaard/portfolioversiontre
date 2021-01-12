@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kontakt, adresse">
+    <meta name="description" content="kontakt color perception, color perception adresse">
+    <link rel="icon" type="image/png" href="assets/images/logobrowser.png" />
+    <link rel="stylesheet" href="assets/css/kontakt.css">
+    <!--jQuery fra jsDelivr, tutorial credit: https://www.youtube.com/watch?v=eg4e-FObyJ8-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="script" href="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js">
+    <script src="assets/js/kontakt.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Color Perception - Kontakt</title>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <header class="item1">
+            <div class="navbar">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                <nav class="menu">
+                    <a href="index.html" class="forsidemobil">FORSIDE</a>
+                    <a href="index.html"><img src="assets/images/logonav2.png" alt="logo" class="logo"></a>
+                    <a href="artister.html">ARTISTER</a>
+                    <a href="galleri.html">GALLERI</a>
+                    <a href="info.html">INFORMATION</a>
+                    <a href="omos.html">OM OS</a>
+                    <a href="kontakt.html"><strong>KONTAKT</strong></a>
+                </nav>
+            </div>
+            <div class="logotext">
+                <img src="assets/images/logobo.png" alt="Originalt logo i sort" class="imgLogoTextMobil">
+            </div>
+            <h1 class="headline">KONTAKT</h1>
+        </header>
+        <section class="item2">
+            <h2>KONTAKTFORMULAR</h2>
+            <p>Du er til en hver tid velkommen til at komme ned forbi butikken, <br> ringe på tlf: 22 53 50 08 eller sende os en mail via. nedenstående </p>
+            <br>
+            <!--ink@colorperception.dk-->
+            <!--formspree for at sende e-mailen-->
+            <form action="https://formspree.io/victorialydiaj@gmail.com" method="POST">
+                <label class="label">
+                    E-mail
+                    <input name="E-mail" type="email" class="email">
+                </label>
+                <label class="label">
+                    Emne
+                    <input name="Emne" type="text" class="subject">
+                </label>
+                <label class="label">
+                    Besked
+                    <textarea name="Besked" class="message"></textarea>
+                </label>
+                <div class="status"></div>
+                <button type="submit" class="submit">Send</button>
+            </form>
+        </section>
+        <section class="item3">
+            <!--integreret kort fra: https://www.google.com/maps/place/Color+Perception+Tattoo+Lounge/@57.0504949,9.9145673,17z/data=!3m1!4b1!4m5!3m4!1s0x4649328ba015e555:0x9ee6d70963433670!8m2!3d57.050492!4d9.916756-->
+            <div class="iframe-googlemap">
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.060992893959!2d9.914567315731054!3d57.05049489862791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649328ba015e555%3A0x9ee6d70963433670!2sColor%20Perception%20Tattoo%20Lounge!5e0!3m2!1sda!2sdk!4v1591360636012!5m2!1sda!2sdk"></iframe>
+            </div>
+        </section>
+        <footer class="item4">
+            <p><strong>Adresse og åbningstider</strong> <br> Vesterbro 80, 9000 Aalborg <br> Åbningstider: tirs – lør: 11.00 – 18.00</p>
+        </footer>
+        <footer class="item5">
+            <p> <img src="assets/images/fbw.png" alt="facebook logo" class="fbanmeldelser"><strong>&nbsp; &nbsp;Anmeldelser</strong></p>
+            <a href="https://www.facebook.com/colorperception/reviews/?ref=page_internal " target="_blank "><img src="assets/images/stars.png " alt="five stars, anmeldelser "></a>
+        </footer>
+        <footer class="item6">
+            <p><strong>Sociale medier</strong></p>
+            <a href="https://www.instagram.com/colorperception/" target="_blank"><img src="assets/images/insta.png" alt="instagram ikon" class="icons"></a>
+            <a href="https://www.facebook.com/colorperception/?ref=page_internal" target="_blank"><img src="assets/images/facebook.png" alt="facebook ikon" class="icons"></a>
+            <!--Originale ikoner, hentet fra instagram og facebook-->
+
+        </footer>
+
+    </div>
+</body>
+
+</html>

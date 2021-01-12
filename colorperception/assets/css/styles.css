@@ -1,0 +1,560 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*DESKTOP VERSION*/
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header header header" "welcome welcome welcome facade facade facade" "insta insta insta insta insta insta" "stars stars stars stars stars stars" "footleft footleft footcenter footcenter footright footright";
+}
+
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+    width: 0.50%;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(252, 249, 80, 0.582);
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50%;
+    background: linear-gradient(rgba(252, 249, 80, 0.74) 0%, rgba(106, 255, 106, 0.74) 20%, rgba(104, 104, 255, 0.795) 40%, rgba(255, 99, 255, 0.74) 60%, rgba(255, 74, 74, 0.74) 80%, rgba(252, 249, 80, 0.74) 100%);
+}
+
+
+/*Forside*/
+
+.item1 {
+    grid-area: header;
+}
+
+
+/*Navigation*/
+
+div nav {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.navbar {
+    text-align: right;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 4%;
+    line-height: 5;
+}
+
+nav a:hover {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.forsidemobil {
+    display: none;
+}
+
+label {
+    margin: 0 10% 0 0;
+    font-size: 2vh;
+    line-height: 10%;
+    display: none;
+    width: 20%;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+.logo {
+    margin: 0.5%;
+    width: 3.28%;
+    vertical-align: middle;
+    float: left;
+}
+
+
+/*Hero*/
+
+.logotext {
+    text-align: center;
+    margin-top: 15%;
+}
+
+.imgLogoTextMobil {
+    display: none;
+}
+
+.arrow {
+    text-align: center;
+    animation: down 2s infinite alternate;
+}
+
+.arrowdown {
+    width: 5%;
+    margin-top: 14%;
+}
+
+@-webkit-keyframes down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2%);
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#heroVideo {
+    position: fixed;
+    object-fit: fill;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Vekomst hilsen*/
+
+.item2 {
+    grid-area: welcome;
+    height: 80vh;
+    color: white;
+    background-color: black;
+    padding: 0 1.5vw 2vh 5vw;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 7vh;
+}
+
+.welcometext {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: 2% 2% 3% 2%;
+    width: 43.5vw;
+    height: 52vh;
+}
+
+
+/*Facade image*/
+
+.item3 {
+    grid-area: facade;
+    height: 80vh;
+    background-color: black;
+    padding: 22vh 5vw 2vh 1.5vw;
+}
+
+.facade {
+    filter: grayscale(100%);
+    width: 43.5vw;
+    height: 52vh;
+}
+
+.facade:hover {
+    filter: none;
+}
+
+
+/*Instagram feed*/
+
+.item4 {
+    grid-area: insta;
+    background-color: white;
+    display: inline;
+    padding: 0 5% 5% 5%;
+}
+
+.igh1 {
+    margin-bottom: 0;
+}
+
+.igp {
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.iglink {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.iglink:hover {
+    font-weight: bold;
+}
+
+
+/*Recommendation*/
+
+.item5 {
+    grid-area: stars;
+    color: white;
+    background-color: black;
+    padding: 0 5% 5% 5%;
+}
+
+.slideshow {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.fadingslides {
+    display: none;
+    text-align: center;
+}
+
+.fadingslides img {
+    width: 100%;
+    position: relative;
+    bottom: 1vw;
+    cursor: default;
+}
+
+.back,
+.forth {
+    cursor: pointer;
+    position: absolute;
+    top: 280%;
+    margin-right: 5%;
+    padding: 1%;
+    color: white;
+    font-size: 3.5vh;
+}
+
+.forth {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.back:hover,
+.forth:hover {
+    background-color: #646463;
+    color: white;
+}
+
+.centerpoints {
+    text-align: center;
+    margin-top: -5%;
+}
+
+.fb {
+    position: absolute;
+    z-index: 2;
+    width: 6.5%;
+    margin: 3.7% 0 0 80%
+}
+
+.dots {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: 0 1%;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+}
+
+.aktiv,
+.dots:hover {
+    background-color: #646463;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.6s;
+    animation-name: fade;
+    animation-duration: 1.6s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/*Footer*/
+
+.item6 {
+    grid-area: footleft;
+    background-color: #646463;
+    text-align: left;
+    color: white;
+    padding: 2% 0 2% 14%;
+}
+
+.item7 {
+    grid-area: footcenter;
+    background-color: #646463;
+    text-align: center;
+    color: white;
+    padding-top: 2%;
+}
+
+p {
+    margin: 0;
+}
+
+.fbanmeldelser {
+    width: 3%;
+}
+
+.item8 {
+    grid-area: footright;
+    background-color: #646463;
+    text-align: right;
+    color: white;
+    padding: 2% 14% 2% 0;
+}
+
+.icons {
+    display: inline;
+    width: 10%;
+}
+
+
+/*IPAD VERSION*/
+
+@media (max-width: 1024px) and (min-width: 414px) {
+    .gridcontainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        grid-template-areas: "header header header" "welcome welcome welcome" "facade facade facade" "insta insta insta" "stars stars stars" "footleft footcenter footright";
+    }
+    .logo {
+        margin: 1%;
+        width: 8%;
+    }
+    .item1 {
+        grid-area: header;
+        height: 48vh;
+    }
+    #heroVideo {
+        height: 48%;
+    }
+    .arrowdown {
+        display: none;
+    }
+    h1 {
+        margin: 3% 0 3% 0;
+        font-size: 4vh;
+    }
+    .logotext {
+        margin: 13% 5%;
+    }
+    .imglogotext {
+        width: 80%;
+    }
+    .item2 {
+        grid-area: welcome;
+        height: 52vh;
+    }
+    .item3 {
+        grid-area: facade;
+        height: 42vh;
+        padding: 0 1.5vw 2vh 5vw;
+    }
+    .welcometext {
+        height: 38.5vh;
+        width: 90vw;
+    }
+    .facade {
+        height: 38.5vh;
+        width: 90vw;
+        filter: none;
+    }
+    .iglink {
+        font-weight: bold;
+    }
+    iframe {
+        width: 80vw;
+        height: auto;
+    }
+    .back,
+    .forth {
+        top: 186%;
+    }
+    .item6 {
+        font-size: 1.3vh;
+    }
+    .item7 {
+        font-size: 1.3vh;
+    }
+    .item8 {
+        font-size: 1.3vh;
+    }
+    .fbanmeldelser {
+        width: 5%;
+    }
+    .icons {
+        width: 13%;
+    }
+}
+
+
+/*IPHONE X VERSION*/
+
+@media (max-width: 414px) {
+    .gridcontainer {
+        grid-template-columns: 1fr;
+        height: auto;
+        grid-template-areas: "header" "welcome" "facade" "insta" "stars" "footleft" "footcenter" "footright";
+    }
+    label {
+        margin: 6% 4% 0 76%;
+        font-size: 4vh;
+        color: white;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        float: right;
+    }
+    .logo {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+        text-align: center;
+        padding: 5% 5% 111% 5%;
+        display: none;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.774);
+    }
+    .menu a {
+        display: grid;
+        margin: 0;
+    }
+    .forsidemobil {
+        display: block;
+    }
+    #toggle:checked+.menu {
+        display: block;
+    }
+    .item1 {
+        height: 27vh;
+    }
+    #heroVideo {
+        width: 100%;
+        height: 27vh;
+        filter: brightness(0.5);
+    }
+    .imglogotext {
+        display: none;
+    }
+    .imgLogoTextMobil {
+        display: block;
+        width: 90vw;
+        margin-left: 4vw;
+    }
+    .arrowdown {
+        display: none;
+    }
+    h1 {
+        font-size: 3vh;
+    }
+    .welcometext {
+        font-size: 1.5vh;
+        width: 100%;
+        height: 50vh;
+    }
+    .item2 {
+        height: 60vh;
+        padding: 0 5vw;
+    }
+    .facade {
+        filter: none;
+        width: 96%;
+        height: auto;
+    }
+    .item3 {
+        grid-area: facade;
+        height: 27vh;
+        background-color: black;
+        padding: 0 1.5vw 2vh 5vw;
+    }
+    .igp {
+        font-size: 1.5vh;
+    }
+    .igh1 {
+        font: 3vh;
+    }
+    iframe {
+        width: 100%;
+        height: 26vh;
+    }
+    .back,
+    .forth {
+        top: 151.5%;
+        font-size: 4vh;
+        padding: 0;
+        margin: 0 0 0 -5%;
+    }
+    .dots {
+        height: 3vw;
+        width: 3vw;
+        margin: 10% 1% 0 0;
+    }
+    .item6 {
+        text-align: center;
+        padding: 3%;
+        font-size: 1.5vh;
+    }
+    .item7 {
+        padding: 3%;
+        font-size: 1.5vh;
+    }
+    .item8 {
+        text-align: center;
+        font-size: 1.5vh;
+        padding: 3%;
+    }
+}

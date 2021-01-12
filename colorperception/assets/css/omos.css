@@ -1,0 +1,547 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*DESKTOP VERSION*/
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header" "hvem hvem nordic nordic" "pic pic andre andre";
+}
+
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+    width: 0.50%;
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgba(252, 249, 80, 0.582);
+}
+
+ ::-webkit-scrollbar-thumb {
+    height: 50%;
+    background: linear-gradient(rgba(252, 249, 80, 0.74) 0%, rgba(106, 255, 106, 0.74) 20%, rgba(104, 104, 255, 0.795) 40%, rgba(255, 99, 255, 0.74) 60%, rgba(255, 74, 74, 0.74) 80%, rgba(252, 249, 80, 0.74) 100%);
+}
+
+
+/*Forside*/
+
+header {
+    position: relative;
+}
+
+.item1 {
+    grid-area: header;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+/*Navigation*/
+
+div nav {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.navbar {
+    text-align: right;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 4%;
+    line-height: 5;
+}
+
+nav a:hover {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+label {
+    margin: 0 10% 0 0;
+    font-size: 2vh;
+    line-height: 10%;
+    display: none;
+    width: 20%;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+.logo {
+    margin: 0.4%;
+    width: 9%;
+    vertical-align: middle;
+    float: left;
+}
+
+.forsidemobil {
+    display: none;
+}
+
+.imgLogoTextMobil {
+    display: none;
+}
+
+
+/*overskift*/
+
+.item1 h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 10vh;
+    margin: 0;
+    padding: 3% 0 0 5%;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0 0 50px rgb(255, 238, 0);
+    animation: cycle 10s linear infinite;
+}
+
+@keyframes cycle {
+    /*https://www.youtube.com/watch?v=pMS99DLuFDY*/
+    0% {
+        text-shadow: 0 0 50px rgb(255, 196, 0);
+    }
+    20% {
+        text-shadow: 0 0 50px rgb(0, 255, 13);
+    }
+    40% {
+        text-shadow: 0 0 50px rgb(0, 17, 255);
+    }
+    60% {
+        text-shadow: 0 0 50px rgb(234, 0, 255);
+    }
+    80% {
+        text-shadow: 0 0 50px rgb(255, 0, 0);
+    }
+}
+
+
+/*hvem vi er*/
+
+.hvemvier {
+    grid-area: hvem;
+    margin-left: 6%;
+    margin-top: 6%;
+}
+
+.hvemvier p {
+    margin: 3% 0 0 4%;
+}
+
+.herknap {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    border: solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 5vh;
+    width: auto;
+    font-size: 3vh;
+    margin-left: 4%;
+    margin-top: 6%;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+    border: solid black;
+    transition: 0.3s;
+}
+
+
+/*hvad vi kan*/
+
+.priser {
+    grid-area: pic;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin-left: 6%;
+    margin-top: -22%;
+}
+
+.prispic {
+    display: block;
+    width: 88%;
+    margin-left: 9%;
+    margin-top: 6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5)
+}
+
+.nordicink {
+    grid-area: nordic;
+    margin-left: 6%;
+    margin-top: 6%;
+}
+
+.awardcontainer {
+    margin: 2% 0 0 4%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+.award {
+    display: flex;
+    margin: 0 0 5vh 0;
+}
+
+.award img {
+    height: 40px;
+    width: 50px;
+}
+
+.nordiclink {
+    cursor: pointer;
+    margin: 2% 0 0 6%;
+}
+
+.nordiclink a {
+    text-decoration: none;
+    color: black;
+}
+
+.andrekonkurrencer {
+    grid-area: andre;
+    margin-left: 6%;
+    margin-top: 2%;
+}
+
+.otherawardcontainer {
+    margin: 2% 0 0 6%;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 7vh;
+    margin: 0 0 3% 4%;
+    font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+    margin: 3% 0 6% 4%;
+    font-size: 3vh;
+    font-family: Lato;
+    font-weight: 300;
+}
+
+
+/*footer*/
+
+.gridfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "footleft footcenter footright";
+}
+
+.item3 {
+    grid-area: footleft;
+    background-color: #646463;
+    text-align: left;
+    color: white;
+    padding: 2% 0 2% 14%;
+    margin-top: 10%;
+}
+
+.item4 {
+    grid-area: footcenter;
+    background-color: #646463;
+    text-align: center;
+    color: white;
+    padding-top: 2%;
+    margin-top: 10%;
+}
+
+p {
+    margin: 0;
+}
+
+.fbanmeldelser {
+    width: 3%;
+}
+
+.item5 {
+    grid-area: footright;
+    background-color: #646463;
+    text-align: right;
+    color: white;
+    padding: 2% 14% 2% 0;
+    margin-top: 10%;
+}
+
+.icons {
+    display: inline;
+    width: 10%;
+}
+
+
+/*IPAD VERSION*/
+
+@media (max-width: 1024px) and (min-width: 414px) {
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "header header header" "hvem hvem hvem" "nordic nordic nordic" "andre andre andre" "pic pic pic";
+    }
+    .logo {
+        margin: 0.8%;
+        width: 22%;
+    }
+    .item1 h1 {
+        font-size: 5vh;
+    }
+    h2 {
+        margin: 4% 0;
+        font-size: 4.5vh;
+    }
+    .hvemvier {
+        margin: 0 4% 0 4%;
+    }
+    .hvemvier p {
+        margin: 3% 0 0 0;
+    }
+    .button {
+        font-size: 2vh;
+        margin: 4% 0 0 0;
+    }
+    .button:hover {
+        display: none;
+    }
+    h3 {
+        margin: 3% 0 6% 0;
+    }
+    .awardcontainer {
+        margin: 2% 0 0 0;
+    }
+    .nordicink {
+        margin: 4%;
+    }
+    .andrekonkurrencer {
+        grid-area: andre;
+        margin-top: 2%;
+    }
+    .otherawardcontainer {
+        margin: 2% 0 0 0;
+    }
+    .priser {
+        margin-left: 4%;
+        margin-top: 0%;
+    }
+    .prispic {
+        width: 80%;
+        margin-left: 6%;
+    }
+    .item3 {
+        font-size: 1.3vh;
+        margin-top: 20%;
+    }
+    .item4 {
+        font-size: 1.3vh;
+        margin-top: 20%;
+    }
+    .item5 {
+        font-size: 1.3vh;
+        margin-top: 20%;
+    }
+    .fbanmeldelser {
+        width: 5%;
+    }
+    .icons {
+        width: 13%;
+    }
+}
+
+
+/*MOBIL VERSION*/
+
+@media (max-width: 414px) {
+    .gridcontainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "header" "hvem" "nordic" "andre" "pic";
+    }
+    .item1 {
+        height: 27vh;
+    }
+    .item1 h1 {
+        font-size: 5vh;
+        padding: 10% 0 3% 5%;
+        z-index: -1;
+        position: absolute;
+        top: 20vh;
+    }
+    label {
+        margin: 6% 4% 0 76%;
+        font-size: 4vh;
+        color: rgba(0, 0, 0, 0.774);
+        display: block;
+        position: absolute;
+        z-index: 1;
+        float: right;
+    }
+    .logo {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+        text-align: center;
+        padding: 5% 5% 111% 5%;
+        display: none;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.774);
+    }
+    .menu a {
+        display: grid;
+        margin: 0;
+        color: black;
+    }
+    .forsidemobil {
+        display: block;
+    }
+    #toggle:checked+.menu {
+        display: block;
+    }
+    .imglogotext {
+        display: none;
+    }
+    .imgLogoTextMobil {
+        display: block;
+        width: 90vw;
+        margin-left: 4vw;
+        margin-top: 7vh;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+    }
+    div nav {
+        background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    h2 {
+        margin: 0;
+        font-size: 4vh;
+    }
+    .hvemvier {
+        margin-top: 20%;
+    }
+    .hvemvier p {
+        margin: 3% 0 0 0;
+        font-size: 1.5vh;
+    }
+    .button {
+        display: inline-block;
+        border: solid black;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        padding: 1.5%;
+        font-size: 1.5vh;
+        margin: 4% 0 0 0;
+    }
+    .button:hover {
+        display: none;
+    }
+    h3 {
+        margin: 3% 0 6% 0;
+        font-size: 2vh;
+        font-family: Lato;
+        font-weight: 300;
+    }
+    .awardcontainer {
+        margin: 2% 0 0 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+    .award {
+        display: flex;
+        margin: 0 0 2vh 0;
+    }
+    .award p {
+        font-size: 1.5vh;
+        padding: 0 5% 0 0;
+    }
+    .award img {
+        height: 20px;
+        width: 25px;
+    }
+    .nordicink {
+        margin-right: 6%;
+    }
+    .nordiclink {
+        margin: 2% 0 0 0;
+    }
+    .nordiclink a {
+        font-size: 1.5vh;
+    }
+    .andrekonkurrencer {
+        grid-area: andre;
+        margin-top: 2%;
+    }
+    .otherawardcontainer {
+        margin: 2% 0 0 0;
+    }
+    .priser {
+        display: none;
+    }
+    .prispic {
+        display: none;
+        width: 40%;
+        margin-left: 6%;
+        margin-top: 6%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5)
+    }
+    .gridfooter {
+        display: block;
+    }
+    .item3 {
+        text-align: center;
+        padding: 3%;
+        font-size: 1.5vh;
+        margin-top: 5%;
+    }
+    .item4 {
+        padding: 3%;
+        font-size: 1.5vh;
+        margin: 0;
+    }
+    .item5 {
+        text-align: center;
+        font-size: 1.5vh;
+        padding: 3%;
+        margin: 0;
+    }
+}

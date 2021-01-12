@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tattoo, tato, tatovører, tatovering, tattooing, aalborg, nordjylland">
+    <meta name="description" content="color perception, color perception tattoo lounge, tatovører i aalborg, tatovører i nordjylland">
+    <link rel="icon" type="image/png" href="assets/images/logobrowser.png" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--jQuery 3. parts koder til hentning af instagram feed^-->
+    <script src="assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Color Perception Tattoo Lounge</title>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <header class="item1" id="top">
+            <video autoplay muted loop id="heroVideo">
+                <source src="assets/images/frontpage/hero.mp4" type="video/mp4">
+            </video>
+            <div class="navbar">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                <nav class="menu">
+                    <a href="index.html" class="forsidemobil">FORSIDE</a>
+                    <a href="index.html"><img src="assets/images/logonav.png" alt="logo" class="logo"></a>
+                    <a href="artister.html">ARTISTER</a>
+                    <a href="galleri.html">GALLERI</a>
+                    <a href="info.html">INFORMATION</a>
+                    <a href="omos.html">OM OS</a>
+                    <a href="kontakt.html">KONTAKT</a>
+                </nav>
+            </div>
+            <div class="logotext">
+                <img src="assets/images/frontpage/logotext.png" alt="color perception logo tekst" class="imglogotext">
+                <img src="assets/images/frontpage/logowo.png" alt="Originalt logo i hvid" class="imgLogoTextMobil">
+            </div>
+            <div class="arrow">
+                <a href="#welcome">
+                    <img src="assets/images/frontpage/arrow-down.png" alt="arrow down" class="arrowdown">
+                    <!--ikoner lavet i illustrator-->
+                </a>
+            </div>
+        </header>
+        <section class="item2" id="welcome">
+            <h1>VELKOMMEN</h1>
+            <div class="welcometext">
+                <p><strong>… til en af Danmarks førende tatovør saloner</strong> <br> <br> Hos Color Perception Tattoo Lounge har vi lavet og designet unikke tatoveringer, baseret på gode teknikker, erfaring og kreativitet siden 2013 i hjertet af Aalborg.
+                    I vores smagfulde omgivelser er vi 5 kreative, detaljeorienterede og topprofessionelle tatovører der finder det centralt at kunden er i fokus, får den rette rådgivning og en god oplevelse. <br><br> Utallige priser og konkurrencer er
+                    vundet, så hos os er du gode hænder. Vi har henover de sidste 4 år, vundet sammenlagt elleve førstepladser, ni andenpladser og fire tredjepladser til Nordic Ink Festivallen. Derudover har vi gjort os bemærket internationalt i henholdsvis
+                    Manchester, Berlin og Stockholm hvor både første- og tredjepladser er vundet. Vi går ikke på kompromis med kvaliteten, og dette afspejles tydeligt i vores arbejde.
+                    <br><br> Du er til en hver tid velkommen til at besøge os i butikken, til en uforpligtende snak om din kommende tatovering!
+                </p>
+            </div>
+        </section>
+        <section class="item3">
+            <div>
+                <img src="assets/images/frontpage/shopimg.jpeg" alt="color perception, facade" class="facade">
+            </div>
+        </section>
+        <section class="item4">
+            <h1 class="igh1">INSTAGRAM</h1>
+            <p class="igp">Følg vores arbejde på
+                <a href="https://www.instagram.com/colorperception/" class="iglink">@colorperception</a></p>
+            <div id="instagram-feed" class="instagram_feed"></div>
+            <!--tutorial credict to: https://www.cssscript.com/instagram-photos-feed/?fbclid=IwAR2yunwZYQZFyoMIKPoSGCSjissAwUK0VHoDoYiPOFC4WKXGiUSf9UegzDM-->
+            <script src="assets/js/jquery.instagramFeed.min.js"></script>
+            <script>
+                (function($) {
+                    $(window).on('load', function() {
+                        $.instagramFeed({
+                            'username': 'colorperception',
+                            'container': "#instagram-feed",
+                            'display_profile': false,
+                            'display_biography': false,
+                            'display_gallery': true,
+                            'callback': null,
+                            'styling': true,
+                            'items': 5,
+                            'items_per_row': 5,
+                            'margin': 0.2
+                        });
+
+
+                    });
+                })(jQuery);
+            </script>
+        </section>
+        <section class="item5">
+            <h1>ANMELDELSER</h1>
+            <!--Lært gennem w3schools: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+            <div class="fadingslides">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fipixel%2Fposts%2F10157789459742326&width=auto" width="900" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+                    allow="encrypted-media"></iframe>
+            </div>
+            <div class="fadingslides ">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftinus.knudsen%2Fposts%2F10221613781277573&width=auto " width="900" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+                    allow="encrypted-media"></iframe>
+            </div>
+            <div class="fadingslides">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D10215720837466873%26id%3D1021054384&width=auto" width="900" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="fadingslides ">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flarspeter.stabellstentoft%2Fposts%2F2144023709016888&width=auto " width="900" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="fadingslides">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvarmloese%2Fposts%2F10211718488499613&width=auto" width="900" height=" 335 " style="border:none;overflow:hidden " scrolling="no " frameborder="0
+                    " allowTransparency="true " allow="encrypted-media "></iframe>
+            </div>
+            <a class="back " onclick="plus(-1) ">&#10094;</a>
+            <a class="forth " onclick="plus(1) ">&#10095;</a>
+            <div style="centerpoint " class="centerpoints ">
+                <span class="dots " onclick="ongoingSlides(1) "></span>
+                <span class="dots " onclick="ongoingSlides(2) "></span>
+                <span class="dots " onclick="ongoingSlides(3) "></span>
+                <span class="dots " onclick="ongoingSlides(4) "></span>
+            </div>
+        </section>
+        <footer class="item6 ">
+            <p><strong>Adresse og åbningstider</strong> <br> Vesterbro 80, 9000 Aalborg <br> Åbningstider: tirs – lør: 11.00 – 18.00</p>
+        </footer>
+        <footer class="item7 ">
+            <p> <img src="assets/images/fbw.png" alt="facebook logo" class="fbanmeldelser"><strong>&nbsp; &nbsp;Anmeldelser</strong></p>
+            <a href="https://www.facebook.com/colorperception/reviews/?ref=page_internal " target="_blank "><img src="assets/images/stars.png " alt="five stars, anmeldelser "></a>
+        </footer>
+        <footer class="item8 ">
+            <p><strong>Sociale medier</strong></p>
+            <a href="https://www.instagram.com/colorperception/ " target="_blank "><img src="assets/images/insta.png " alt="instagram ikon " class="icons "></a>
+            <a href="https://www.facebook.com/colorperception/?ref=page_internal " target="_blank "><img src="assets/images/facebook.png " alt="facebook ikon " class="icons "></a>
+            <!--Originale ikoner, hentet fra instagram og facebook-->
+        </footer>
+    </div>
+</body>
+
+</html>

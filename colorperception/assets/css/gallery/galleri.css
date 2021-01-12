@@ -1,0 +1,324 @@
+    @charset "utf-8";
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+    /*DESKTOP VERSION*/
+    
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "header header header" "gallery gallery gallery" "footleft footcenter footright";
+    }
+    /*Scroll bar*/
+    
+     ::-webkit-scrollbar {
+        width: 0.50%;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: rgba(252, 249, 80, 0.582);
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        height: 50%;
+        background: linear-gradient(rgba(252, 249, 80, 0.74) 0%, rgba(106, 255, 106, 0.74) 20%, rgba(104, 104, 255, 0.795) 40%, rgba(255, 99, 255, 0.74) 60%, rgba(255, 74, 74, 0.74) 80%, rgba(252, 249, 80, 0.74) 100%);
+    }
+    /*Forside*/
+    
+    header {
+        position: relative;
+    }
+    
+    .item1 {
+        grid-area: header;
+        width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    /*Navigation*/
+    
+    div nav {
+        background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    .navbar {
+        text-align: right;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: white;
+        margin-right: 4%;
+        line-height: 5;
+    }
+    
+    nav a:hover {
+        font-weight: 300;
+        cursor: pointer;
+    }
+    
+    label {
+        margin: 0 10% 0 0;
+        font-size: 2vh;
+        line-height: 10%;
+        display: none;
+        width: 20%;
+        float: right;
+    }
+    
+    #toggle {
+        display: none;
+    }
+    
+    .logo {
+        margin: 0.4%;
+        width: 9%;
+        vertical-align: middle;
+        float: left;
+    }
+    
+    .forsidemobil {
+        display: none;
+    }
+    
+    .imgLogoTextMobil {
+        display: none;
+    }
+    /*Overskift*/
+    
+    .item1 h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        font-size: 10vh;
+        margin: 0;
+        padding: 3% 0 3% 5%;
+        -webkit-text-stroke: 1.5px black;
+        text-shadow: 0 0 50px rgb(255, 238, 0);
+        animation: cycle 10s linear infinite;
+    }
+    
+    @keyframes cycle {
+        /*https://www.youtube.com/watch?v=pMS99DLuFDY*/
+        0% {
+            text-shadow: 0 0 50px rgb(255, 196, 0);
+        }
+        20% {
+            text-shadow: 0 0 50px rgb(0, 255, 13);
+        }
+        40% {
+            text-shadow: 0 0 50px rgb(0, 17, 255);
+        }
+        60% {
+            text-shadow: 0 0 50px rgb(234, 0, 255);
+        }
+        80% {
+            text-shadow: 0 0 50px rgb(255, 0, 0);
+        }
+    }
+    
+    h2 {
+        font-family: 'Oswald', sans-serif;
+        display: inline;
+        font-size: 4.5vh;
+    }
+    /*Gallery*/
+    
+    .item2 {
+        grid-area: gallery;
+        height: 100%;
+    }
+    
+    .gallery {
+        text-align: center;
+    }
+    
+    .gallery img {
+        width: 18%;
+        padding: 0.5%;
+        filter: grayscale(100%);
+        cursor: pointer;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.1);
+        filter: none;
+    }
+    
+    .lb-data .lb-number {
+        display: none;
+    }
+    /*Footer*/
+    
+    .item3 {
+        grid-area: footleft;
+        background-color: #646463;
+        text-align: left;
+        color: white;
+        padding: 2% 0 2% 14%;
+        margin-top: 10%;
+    }
+    
+    .item4 {
+        grid-area: footcenter;
+        background-color: #646463;
+        text-align: center;
+        color: white;
+        padding-top: 2%;
+        margin-top: 10%;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    .fbanmeldelser {
+        width: 3%;
+    }
+    
+    .item5 {
+        grid-area: footright;
+        background-color: #646463;
+        text-align: right;
+        color: white;
+        padding: 2% 14% 2% 0;
+        margin-top: 10%;
+    }
+    
+    .icons {
+        display: inline;
+        width: 10%;
+    }
+    /*IPAD VERSION*/
+    
+    @media (max-width: 1024px) and (min-width: 414px) {
+        .logo {
+            margin: 0.8%;
+            width: 22%;
+        }
+        .item1 h1 {
+            font-size: 5vh;
+        }
+        .gallery img {
+            filter: none;
+        }
+        .item3 {
+            font-size: 1.3vh;
+        }
+        .item4 {
+            font-size: 1.3vh;
+        }
+        .item5 {
+            font-size: 1.3vh;
+        }
+        .fbanmeldelser {
+            width: 5%;
+        }
+        .icons {
+            width: 13%;
+        }
+    }
+    /*IPHONE X VERSION*/
+    
+    @media (max-width: 414px) {
+        .gridcontainer {
+            grid-template-columns: 1fr;
+            height: auto;
+            grid-template-areas: "header" "gallery" "footleft" "footcenter" "footright";
+        }
+        label {
+            margin: 6% 4% 0 76%;
+            font-size: 4vh;
+            color: rgba(0, 0, 0, 0.774);
+            display: block;
+            position: absolute;
+            z-index: 1;
+            float: right;
+        }
+        .logo {
+            display: none;
+        }
+        .menu {
+            width: 100%;
+            text-align: center;
+            padding: 5% 5% 111% 5%;
+            display: none;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.774);
+        }
+        .menu a {
+            display: grid;
+            margin: 0;
+            color: black;
+        }
+        .forsidemobil {
+            display: block;
+        }
+        #toggle:checked+.menu {
+            display: block;
+        }
+        .imglogotext {
+            display: none;
+        }
+        .imgLogoTextMobil {
+            display: block;
+            width: 90vw;
+            margin-left: 4vw;
+            margin-top: 7vh;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+        }
+        div nav {
+            background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .item1 {
+            height: 27vh;
+        }
+        .item1 h1 {
+            font-size: 5vh;
+            padding: 10% 0 3% 5%;
+            z-index: -1;
+            position: absolute;
+            top: 20vh;
+        }
+        .item2 {
+            padding-top: 27%;
+        }
+        h2 {
+            font-size: 3vh;
+        }
+        .gallery img {
+            width: 45%;
+            filter: none;
+        }
+        .item3 {
+            text-align: center;
+            padding: 3%;
+            font-size: 1.5vh;
+            margin-top: 5%;
+        }
+        .item4 {
+            padding: 3%;
+            font-size: 1.5vh;
+            margin: 0;
+        }
+        .item5 {
+            text-align: center;
+            font-size: 1.5vh;
+            padding: 3%;
+            margin: 0;
+        }
+    }
