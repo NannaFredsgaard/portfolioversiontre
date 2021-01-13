@@ -11,29 +11,32 @@ p, h1, h2, h3, ul, ul li, ul li a {
     font-family: 'Comfortaa', cursive;
 }
 
+h2 {
+    margin: 0;
+    line-height: 5vh;
+}
+
+
 .headergrid {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .navigation {
     list-style-type: none;
     padding: 0;
-    margin: 5vh 0 0 5vh;
+    margin: 5vh 0 10vh 5vh;
 }
 
 .newnavcolor {
     background-color: white;
 }
 
-ul {
-    margin: 0;
-}
-
 ul li {
     display: inline;
-    padding: 5%;
+    padding: 0 5% 0 5%;
 }
 
 ul li a {
@@ -46,9 +49,48 @@ ul li a {
 
 ul li a:hover {
     cursor: pointer;
-    border-bottom: 1px solid mediumpurple;
+    border-bottom: 1px solid black;
     color: mediumpurple;
 }
+
+.dropbtn {
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding-top: 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color: mediumpurple;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    cursor: pointer;
+    color: mediumpurple;
+    border-bottom: 1px solid black;
+  }
 
 .purpleslash {
     color: mediumpurple;
@@ -60,8 +102,8 @@ ul li a:hover {
 }
 
 .logo img {
-    height: 80px;
-    width: 100px;
+    height: 75px;
+    width: 200px;
 }
 
 
@@ -152,7 +194,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 10vh;
+    margin-top: 20vh;
     padding-left: 180px;
     padding-right: 180px;
 }
@@ -348,20 +390,116 @@ button:hover {
 
 .projekterinfocontainer {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .projekterinfocontainer p {
-    text-align: center;
+    text-align: left;
     line-height: 4vh;
     margin: 20vh 40vh 0 40vh;
+}
+
+.cardcontainerlesstopmargin {
+    margin-top: 10vh;
 }
 
 
 /*Aalborg Zoo*/
 
+.tophvertprojektcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
 
+.tophvertprojekttext {
+    grid-column: 1;
+    margin-right: 50vh;
+    margin: 12vh 10vw 10vh 10vw;
+}
 
+.coloredyear {
+    color: mediumpurple;
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
+
+.tophvertprojekttext p {
+    line-height: 4vh;
+    margin-top: 0;
+}
+
+.tophvertprojektimg {
+    grid-column: 2;
+    text-align: center;
+}
+
+.tophvertprojektimg img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tophvertprojektimg img {
+    width: 500px;
+    height: 500px;
+}
+
+.whitebg {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    top: 320px;
+}
+
+.creambg {
+    width: 100%;
+    height: 400px;
+    background-color: #F6F1F1;
+    position: absolute;
+    z-index: -1;
+    top: 1000px;
+}
+
+.procescontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.procescontainer img {
+    width: 300px;
+    height: 300px;
+    margin-top: 20vh;
+    padding-left: 3vw;
+}
+
+.procestext {
+    padding: 0 4vw 0 4vw;
+}
+
+.procestext1 {
+    color: mediumpurple;
+    padding: 0 4vw 0 4vw;
+}
+
+.procestext2 {
+    color: mediumpurple;
+    padding: 0 4vw 0 4vw;
+}
+
+.procestext3 {
+    color: mediumpurple;
+    padding: 0 4vw 0 4vw;
+}
+
+.procestext4 {
+    color: mediumpurple;
+    padding: 0 4vw 0 4vw;
+}
 
 
 
@@ -404,13 +542,13 @@ button:hover {
     height: 414px;
     position: absolute;
     right: 10%;
-    top: 15%;
+    top: 22vh;
 }
 
 h1 {
     position: absolute;
     left: 8%;
-    top: 25%;
+    top: 35vh;
     font-family: 'Comfortaa', cursive;
     color: black;
     font-size: 5vh;

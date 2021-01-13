@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee+Shade&family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" media="all">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" async defer></script>
     <title>Nanna Nakel Fredsgaard - Portfolio</title>
     <script src="./assets/js/javascript.js" async defer></script>
@@ -22,12 +24,20 @@
             <div class="headergrid">
 
                 <ul class="navigation">
-                    <li><a href="projekterne.html">Projekter</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn" href="projekterne.html">Projekterne</a>
+                        <div class="dropdown-content">
+                        <a href="aalborgzooo.html">Aalborg Zoo</a>
+                        <a href="svale.html">Svalegaarden Mest</a>
+                        <a href="cp.html">Color Perception</a>
+                        <a href="bender.html">Bender Tærter</a>
+                        </div>
+                    </li>
                     <li class="purpleslash">/</li>
                     <li><a href="ommigg.html">Om mig</a></li>              
                 </ul>
                 <a class="logo" href="index.html">
-                    <img src="assets/img/logoport.png" alt="logo">
+                    <img src="assets/img/logopurplelogo2.png" alt="logo">
                 </a>
                 <ul class="links">
                     <li><a href="https://www.linkedin.com/in/nanna-nakel-fredsgaard-9a8469130/" target="blank">LinkedIn</a></li>
@@ -58,7 +68,7 @@
                 har lyst til at arbejde med mig. Jeg er altid frisk på en snak over en kop kaffe.
                 
             </p>
-            <button onclick="location.href='ommig.html'" type="button">Lær mig bedre at kende her</button>
+            <button onclick="location.href='ommigg.html'" type="button">Lær mig bedre at kende her</button>
         </div>
         <div class="imagecontainer">
             <div class="fadedbox"></div>
@@ -78,42 +88,42 @@
     <section>
         <div class="cardcontainer">
             <div class="card">
-                <a href="projekter.html#zoocontent">
+                <a href="aalborgzooo.html">
                     <p class="cardheadline">
                         Aalborg Zoo - Interaktiv video
                     </p>
                 </a>
-                <a href="projekter.html#zoocontent">
+                <a href="aalborgzooo.html">
                     <img src="assets/img/zoo.png">
                 </a>
             </div>
             <div class="card">
-                <a href="projekter.html#cpcontent">
+                <a href="cp.html">
                     <p class="cardheadline">
                         Color Perception - Website
                     </p>
                 </a>
-                <a href="projekter.html#cpcontent">
-                    <img class="imgsize" src="assets/img/cpimg.jpg">
+                <a href="cp.html">
+                    <img class="imgsize" src="assets/img/cpbillede.png">
                 </a>
             </div>
             <div class="card">
-                <a href="projekter.html#smcontent">
+                <a href="svale.html">
                     <p class="cardheadline">
                         Svalegaarden Mest - Website
                     </p>
                 </a>
-                <a href="projekter.html#smcontent">
+                <a href="svale.html">
                     <img class="imgsize" src="assets/img/svaleprojekt.png">
                 </a>
             </div>
             <div class="card">
-                <a href="projekter.html#mfcontent">
+                <a href="bender.html">
                     <p class="cardheadline">
                         Ungdomsringens Musikfestival - Website
                     </p>
                 </a>
-                <a href="projekter.html#mfcontent"> 
+                <a href="bender.html"> 
                     <img src="assets/img/mf.png">
                 </a>
             </div>
