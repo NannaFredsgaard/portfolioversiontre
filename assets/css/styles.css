@@ -340,7 +340,7 @@ button:hover {
 
 .text {
     padding: 0;
-    font-size: 2vh;
+    font-size: 1.8vh;
     float: left;
     margin-left: 220px;
     grid-row: 1 / span 2;
@@ -584,7 +584,7 @@ h1 {
 
 .evneroverskrift {
     text-align: left;
-    font-size: 2.2vh;
+    font-size: 1.8vh;
     padding: 4vh 4vw 0 4vw;
 }
 
@@ -597,7 +597,7 @@ h1 {
 
 .cvtext {
     text-align: center;
-    font-size: 3vh;
+    font-size: 1.8vh;
     font-family: 'Comfortaa', cursive;
     margin-top: 10vh;
 }
@@ -683,7 +683,7 @@ footer {
 }
 
 .copyright p{
-    font-size: 1.2vw;
+    font-size: 1.8vh;
     margin: 1vw;
 }
 
@@ -738,6 +738,5 @@ footer {
 }
 
 }
-
 
 
