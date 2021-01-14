@@ -10,15 +10,17 @@ body {
 p, ul, ul li, ul li a {
     font-size: 1.8vh;
     line-height: 3.5vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2 {
-    font-family: Fairplay;
+    font-family: 'Playfair Display', serif;
 }
 
 h1 {
     font-size: 10vh;
     font-weight: normal;
+    margin-bottom: 5vh;
 }
 
 h2 {
@@ -137,6 +139,7 @@ ul li a:hover {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr; 
+    margin-bottom: 10vh;
 }
 
 .imagecontainer {
@@ -179,7 +182,6 @@ ul li a:hover {
 }
 
 .welcometext {
-    font-family: 'Comfortaa', cursive;
     margin-top: 200px;
     margin: 150px 0 0 10vw;
     line-height: 4vh;
@@ -293,8 +295,6 @@ button:hover {
     background-color: #D2CAF9;
 }
 
-
-
 /*Projekter CSS*/
 
 .projektcontainer {
@@ -333,8 +333,6 @@ button:hover {
 .vl {
     width: 2px;
     background-color: mediumpurple;
-    /*border-left: 3px solid mediumpurple;
-    height: 100vh;*/
     position: fixed;
     left: 155px;
     top: 2%;
@@ -435,8 +433,9 @@ button:hover {
 .coloredyear {
     color: mediumpurple;
     margin-top: 0;
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
     font-size: 3vh;
+    padding-top: 1vh;
 }
 
 .tophvertprojekttext h1 {
@@ -450,6 +449,11 @@ button:hover {
     text-align: center;
 }
 
+.tophvertprojekttimg {
+    grid-column: 2;
+    text-align: center;
+}
+
 .tophvertprojektimg img:hover {
     transform: scale(1.1);
     transition: 0.5s;
@@ -458,6 +462,11 @@ button:hover {
 
 .tophvertprojektimg img {
     width: 500px;
+    height: 500px;
+}
+
+.tophvertprojekttimg img {
+    width: 600px;
     height: 500px;
 }
 
@@ -490,7 +499,12 @@ button:hover {
     width: 300px;
     height: 300px;
     margin-top: 20vh;
-    padding-left: 3vw;
+    margin-left: 3vw;
+}
+
+.border {
+    border: #F6F1F1 10px solid;
+    padding: 0;
 }
 
 .procestext {
@@ -516,31 +530,6 @@ button:hover {
     color: mediumpurple;
     padding: 0 4vw 0 4vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Om mig styles*/
 
@@ -573,7 +562,6 @@ button:hover {
     margin-left: 8%;
     font-size: 1.8vh;
     line-height: 3.5vh;
-    font-family: 'Comfortaa', cursive;
     width: 50%;
 }
 
@@ -613,7 +601,6 @@ button:hover {
 .cvtext {
     text-align: center;
     font-size: 1.8vh;
-    font-family: 'Comfortaa', cursive;
     margin-top: 10vh;
 }
 
@@ -668,19 +655,32 @@ button a:hover {
 
 
 .ommignederstbillede {
-    border-radius: 50%;
-    height: 50vh;
-    width: 25vw;
+    height: auto;
+    width: auto;
     margin-left: 25%;
 }
 
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
 
-
-
-
-
-
-
+.shake {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 2s;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
 
 
 footer {
